@@ -2,11 +2,11 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'libmineshaft'
+copyright = '2021, Double Fractal'
+author = 'Double Fractal Game Studios'
 
-release = '0.1'
+release = '0.1.0'
 version = '0.1.0'
 
 # -- General configuration
@@ -19,7 +19,7 @@ extensions = [
     'sphinx.ext.intersphinx',
 ]
 
-intersphinx_mapping = {
+intersphinx_mappaing = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
 }

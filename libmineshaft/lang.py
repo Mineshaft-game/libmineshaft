@@ -1,0 +1,2 @@
+def respond(response):
+    pass

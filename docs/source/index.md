@@ -3,5 +3,5 @@ libmineshaft is a helper library for Mineshaft. It also will be used in the near
 
 ```{toctree}
 
-submodules.md
+Submodule documentation <submodules>
 ```

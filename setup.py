@@ -2,8 +2,8 @@ from setuptools import setup
 
 setup(
     name='libmineshaft',
-    version='0.1.0',
-    description='Helper library for Mineshaft and mod creation for it',
+    version='0.1.1',
+    description='Helper library for Mineshaft and mod creation for it in near future',
     url='https://github.com/Mineshaft-game/libmineshaft',
     author='Double Fractal Game Studios',
     author_email='mayu2kura1@gmail.com',

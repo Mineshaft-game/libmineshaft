@@ -17,7 +17,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'myst_parser']
+    'myst_parser',
+    'sphinx.ext.autosectionlabel']
 
 intersphinx_mappaing = {
     'python': ('https://docs.python.org/3/', None),

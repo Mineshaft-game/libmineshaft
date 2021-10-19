@@ -1,4 +1,1 @@
-import .shell
-
-
-#print("libmineshaft does not provide the interactive Mineshaft shell at this version ")
+print("libmineshaft does not provide the interactive Mineshaft shell at this version ")

@@ -1,2 +1,2 @@
 def respond(response):
-    pass
+    raise NotImplementedError()

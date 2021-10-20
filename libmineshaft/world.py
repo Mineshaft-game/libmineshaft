@@ -3,4 +3,3 @@ class World():
         self.gamemode = gamemode
         self.world = world
         self.name = name
-

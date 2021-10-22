@@ -19,11 +19,11 @@ class Block:
         self.breaktime = breaktime
 
 
-air = Block(0,  image=False, 
-             resistance=-1,  name="Air",  falls = False,  breaktime=-1)
+air = Block(0,  image=False,
+            resistance=-1,  name="Air",  falls=False,  breaktime=-1)
 dirt = Block(1,  ["assets",  "images",  "blocks",  "dirt.png"],
              resistance=0,  name="Dirt",  falls=False,  breaktime=2)
-stone = Block(2,  ["assets",  "images",  "blocks",  "stone.png"], 
-             resistance = 10,  name="Stone",  falls=False,  breaktime=15)
+stone = Block(2,  ["assets",  "images",  "blocks",  "stone.png"],
+              resistance=10,  name="Stone",  falls=False,  breaktime=15)
 
-BLOCKS = {0 : air,  1 : dirt,  2 : stone}
+BLOCKS = {0: air,  1: dirt,  2: stone}

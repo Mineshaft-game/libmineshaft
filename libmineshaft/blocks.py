@@ -28,4 +28,4 @@ stone = Block(2,  ["assets",  "images",  "blocks",  "stone.png"],
 cobblestone = Block(3,  ["assets", "images",  "blocks",  "cobblestone.png"], 
              resistance = 10,  name = "Cobblestone",  falls=False,  breaktime=15)
 
-BLOCKS = {0 : air,  1 : dirt,  2 : stone}
+BLOCKS = {0 : air,  1 : dirt,  2 : stone,  3 : cobblestone}

@@ -91,5 +91,14 @@ cobblestone = Block(
     breaktime=15,
 )
 
+bedrock = Block(
+    7,
+    ["assets", "images", "blocks", "bedrock.png"],
+    resistance=-1,
+    name="Bedrock",
+    falls=False,
+    breaktime=-1,
+)
+
 
 BLOCKS = {0: air, 1: stone, 2: grass, 3: dirt, 4: cobblestone}

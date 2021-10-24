@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="libmineshaft",
-    version="0.1.2",
+    version="0.1.3",
     description="Helper library for Mineshaft and mod creation for it in near future",
     url="https://github.com/Mineshaft-game/libmineshaft",
     author="Double Fractal Game Studios",

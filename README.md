@@ -7,3 +7,11 @@ It may be a little bit broken if not used in the right placement with the path a
 
 ## Documentation
 at the current moment, there is no documentation
+
+## Installation
+Run the command below to install the lastest version:
+
+
+```
+pip3 install --user libmineshaft
+```

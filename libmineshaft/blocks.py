@@ -39,18 +39,20 @@ class NoIDBlock(Block):
         self.breaktime = breaktime
 
 
-class MultipleIDBlock(Block):
-    def __init__(self, blocks):
+class MultipleStateBlock(Block):
+    def __init__(self, id, blocks):
         if len(self.blocks) > 15:
             raise IndexError(
                 "There is too much block IDs.\nMore block ID slots may be added in the future"
             )
+        self.id = id
         self.blocks = blocks
         self.default = self.blocks[0]
 
 
 air = Block(0, image=False, resistance=-1, name="Air", falls=False, breaktime=-1)
-stone = MultipleIDBlock(
+stone = MultipleStateBlock(
+    1,
     [
         NoIDBlock(
             ["assets", "images", "blocks", "stone.png"],
@@ -59,7 +61,7 @@ stone = MultipleIDBlock(
             falls=False,
             breaktime=15,
         )
-    ]
+    ],
 )
 
 grass = Block(
@@ -90,4 +92,4 @@ cobblestone = Block(
 )
 
 
-BLOCKS = {0: air, 1: dirt, 2: stone, 3: cobblestone}
+BLOCKS = {0: air, 1: stone, 2: grass, 3: dirt, 4: cobblestone}

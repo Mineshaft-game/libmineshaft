@@ -64,4 +64,4 @@ cobblestone = Block(4,  ["assets", "images",  "blocks",  "cobblestone.png"],
 
 
 
-BLOCKS = {0: air,  1: dirt,  2: stone,  3: cobblestone}
+BLOCKS = {0: air,  1: stone, 2 : grass,  3 : dirt,   4 : cobblestone}

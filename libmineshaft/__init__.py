@@ -6,3 +6,4 @@ __credits__ = """Double Fractal Game Studios team:
 Mayu Sakurai
 Alexey Pavlov
 """
+

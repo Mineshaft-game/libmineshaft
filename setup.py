@@ -21,9 +21,6 @@ setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
         "Intended Audience :: Developers",
-        "Topic :: Software Developement :: Libraries :: pygame",
-        "Topic :: Software Developement :: Libraries",
-        "Topic :: Games/Entertainement",
     ],
     keywords=[
         "Minecraft",

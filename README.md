@@ -14,5 +14,7 @@ Run the command below to install the lastest version:
 
 
 ```
-pip3 install --user libmineshaft
+pip3 install --user libmineshaft # install
+pip3 install --user --upgrade libmineshaft # update to lastest version
+pip3 uninstall libmineshaft # uninstall
 ```

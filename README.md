@@ -4,7 +4,7 @@
 # libmineshaft
 [![libmineshaft](https://raw.githubusercontent.com/Mineshaft-game/libmineshaft/main/logo.png)](#)
 This library is created to replace the resources folder and half-working mod components in the original Mineshaft.
-It may be a little bit broken if not used in the right placement with the path and stuff, but this will be optimized in the near future using mod support and path finders.
+
 
 ## Documentation
 at the current moment, there is no documentation

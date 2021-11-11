@@ -6,8 +6,8 @@ project = 'libmineshaft'
 copyright = '2021, Double Fractal'
 author = 'Double Fractal Game Studios'
 
-release = '0.1.0'
-version = '0.1.0'
+release = '0.1.4'
+version = '0.1.4'
 
 # -- General configuration
 

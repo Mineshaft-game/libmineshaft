@@ -1,4 +1,4 @@
-import libmineshaft.lang
+import libmineshaft.lang as lang
 
 
 def run():

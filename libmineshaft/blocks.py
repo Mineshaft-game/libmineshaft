@@ -12,6 +12,15 @@ class Block:
         falls=False,
         breaktime=10,  # seconds
     ):
+        """
+        The basic block class.
+        `id` is the ID of the block, is an `int`.
+        `image` is the path of the image as a os.path, e.g `["images", "block.png"]`.
+        `resistance` is the resistance in `int`. Defaults to `2`.
+        `name` is a `str`ing. Defaults to `"Block"`.
+        `unbreakable` is an `bool`, showing off if the block is unbreakable, e.g. Bedrock. Defaults to `False`
+        `breaktime` is an `int`, which represents seconds it takes to break this block. Defaults to `10`
+        """
         self.id = id
         self.image = os.path.join(image)
         self.resistance = resistance

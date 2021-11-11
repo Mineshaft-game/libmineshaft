@@ -4,7 +4,10 @@ import os
 class Item:
     def __init__(self, id, name, texture):
         """
-        The base class for every item. id is the item ID, name is the name,and the texture is a list which is the path to the texture afterwards joined with os.path.join for cross-platform compaptibility
+        The base class for every item. 
+        `id` is the item ID.
+        `name` is the name,
+        and the texture is a list which is the path to the texture afterwards joined with os.path.join for cross-platform compaptibility
         """
         self.id = id
         self.name = name
@@ -47,5 +50,5 @@ class CombatItem(DurabilityItem):
         Attacks the specified victim.
         The victim should have the self.health property.
         """
-        victim.health -= damage
+        victim.health -= self.damage
         self.use_durability()

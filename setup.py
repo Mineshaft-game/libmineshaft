@@ -17,7 +17,7 @@ setup(
     packages=["libmineshaft"],
     install_requires=["pygame>=2.0.1", "pygame-menu"],
     classifiers=[
-        "Development Status :: 1 - Planning",
+        "Development Status :: 2 - Pre-Alpha",
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
         "Intended Audience :: Developers",
@@ -35,4 +35,9 @@ setup(
         "Minecraft mod",
         "mod",
     ],
+    entry_points = {
+        "console_scripts" : [
+            "libmineshaft-console = libmineshaft.__main__:main", 
+        ], 
+    }, 
 )

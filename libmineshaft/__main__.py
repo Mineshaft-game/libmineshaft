@@ -4,7 +4,7 @@ import platform
 import sys
 
 def main():
-    print(f"libmineshaft [{libmineshaft.__version__}] on [{platform.platform()}].\nHave a nice day coding.\n\n")
+    print(f"libmineshaft [{libmineshaft.__version__}] on [{platform.platform()}].\nHave a nice day coding.\n")
     try: 
         shell.run()
     

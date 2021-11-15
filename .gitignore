@@ -2,3 +2,4 @@
 /dist
 /libmineshaft.egg-info
 **/__pycache__
+.libms_history

@@ -8,16 +8,25 @@ def respond(response):
     if response[0].lower() == 'edit':
         try:
             if response [1].lower() == "config":
-                if platform.platform().lower().startswith('linux') or platform.platform().lower().startswith("darwin"):
-                    print("Please be sure that you are running this in a command prompt, not a GUI client.")
-                    sleep(1)
+                if platform.platform().lower().startswith('linux'):
                     os.system("nano .mineshaft/mineshaft.conf")
+                
+                elif platform.platform().lower().startswith("darwin"):
+                    os.system("open .mineshaft/mineshaft.conf")
+                    
+                elif platform.platform().lower().startswith("windows"):
+                    os.system("start .mineshaft/mineshaft.conf")
+                    
                 else:
-                    print("edit: Cannot edit config; Editing is onlly supported on Linux/Unix and MacOS")
+                    print("edit: Cannot edit config; Editing is onlly supported on Linux/Unix, Darwin (OS X/MacOS) and Windows.")
+                    
+                    
         except:
             print("\nedit help:")
             print("edit - print this unhelpful message")
             print("edit config - edit .mineshaft/mineshaft.conf\n")
+            
+            
             
     elif response[0].lower() == "clone":
         print("This requires git to be installed.")
@@ -31,6 +40,6 @@ def respond(response):
     elif response[0].lower() == "help":
         print(f"\nLibmineshaft {libmineshaft.__version__} console help:")
         print("help - this really unhelpful message")
-        print("edit - edit a mineshaft-related file. (Unix-like only) ")
+        print("edit - edit a mineshaft-related file.")
         print("clone - clone the Mineshaft git repository locally")
         print("quit - quit the console\n")

@@ -38,6 +38,8 @@ setup(
     entry_points = {
         "console_scripts" : [
             "libmineshaft-console = libmineshaft.__main__:main", 
+            "libms-console = libmineshaft.__main__:main", 
+            "ms-console = libmineshaft.__main__:main", 
         ], 
     }, 
 )

@@ -47,7 +47,13 @@ class NoIDBlock(Block):
         falls=False,
         breaktime=10,
     ):
-        self.image = os.path.join(image)
+        self.blit = False
+        if type(image) == str:
+            self.imagepath = os.path.join(image)
+        elif type(image) == int:
+            self.blit = False
+            self.imagepath = False
+            
         self.resistance = resistance
         self.name = name
         self.unbreakable = unbreakable
@@ -57,7 +63,7 @@ class NoIDBlock(Block):
 
 class MultipleStateBlock(Block):
     def __init__(self, id, blocks):
-        if len(self.blocks) > 15:
+        if len(blocks) > 15:
             raise IndexError(
                 "There is too much block IDs.\nMore block ID slots may be added in the future"
             )

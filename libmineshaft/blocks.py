@@ -1,4 +1,7 @@
-import os
+"""
+This submodule contains the block classes:
+Block, NoIDBlock and MultipleStateBlock
+"""
 
 
 class Block:
@@ -15,21 +18,15 @@ class Block:
         """
         The basic block class.
         `id` is the ID of the block, is an `int`.
-        `imagepath` is the path of the image as a os.path, e.g `["images", "block.png"]`. However if it is `-1` then it becomes transparent.
+        `image` is the path of the image as a list containing the path to the texture, e.g `["images", "block.png"]`. However if it is `-1` then it becomes transparent.
         `resistance` is the resistance in `int`. Defaults to `2`.
         `name` is a `str`ing. Defaults to `"Block"`. 
         `unbreakable` is an `bool`, showing off if the block is unbreakable, e.g. Bedrock. Defaults to `False`
         `breaktime` is an `int`, which represents seconds it takes to break this block. Defaults to `10`
         """
         
-        self.blit = True
         self.id = id
-        if type(image) == str:
-            self.imagepath = os.path.join(image)
-        elif type(image) == int:
-            self.blit = False
-            self.imagepath = False
-            
+        self.image = image
         self.resistance = resistance
         self.name = name
         self.unbreakable = unbreakable
@@ -47,13 +44,8 @@ class NoIDBlock(Block):
         falls=False,
         breaktime=10,
     ):
-        self.blit = False
-        if type(image) == str:
-            self.imagepath = os.path.join(image)
-        elif type(image) == int:
-            self.blit = False
-            self.imagepath = False
-            
+        
+        self.image = image
         self.resistance = resistance
         self.name = name
         self.unbreakable = unbreakable

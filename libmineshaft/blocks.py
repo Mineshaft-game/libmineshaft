@@ -35,15 +35,19 @@ class Block:
 
 
 class NoIDBlock(Block):
+    
     def __init__(
         self,
         image,
         resistance=2,
-        name="No ID Block",
+        name="No ID Block", 
         unbreakable=False,
         falls=False,
         breaktime=10,
     ):
+        """
+        This class requires the same parameters, except the ID. It is non-existent. See documentation on `libmineshaft.block.Block` for more information.
+        """
         
         self.image = image
         self.resistance = resistance
@@ -54,6 +58,11 @@ class NoIDBlock(Block):
 
 
 class MultipleStateBlock(Block):
+    """
+    This class has only two required parameters:
+    `id`, an intreger representing the block ID.
+    `blocks`, a list of `libmineshaft.blocks.NoIDBlock` objects, max 15 entries.
+    """
     def __init__(self, id, blocks):
         if len(blocks) > 15:
             raise IndexError(

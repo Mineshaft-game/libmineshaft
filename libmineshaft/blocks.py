@@ -1,76 +1,62 @@
 """
+libmineshaft.block
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This submodule contains the block classes:
 Block, NoIDBlock and MultipleStateBlock
 """
 
 
 class Block:
-    def __init__(
-        self,
-        id,
-        image,
-        resistance = 2,
-        name= "Block",
-        unbreakable= False,
-        falls = False,
-        breaktime = 10,  # seconds
-    ):
+    """
+    This is the class that should be used as the parent to every block.
+    """
+
+    id = None
+    image = None
+    resistance = -1
+    name = "Block"
+    unbreakable = True
+    falls = False
+    breaktime = -1
+
+    def blit(self, solution, rect):
         """
-        The basic block class.
-        `id` is the ID of the block, is an `int`.
-        `image` is the path of the image as a list containing the path to the texture, e.g `["images", "block.png"]`. However if it is `-1` then it becomes transparent.
-        `resistance` is the resistance in `int`. Defaults to `2`.
-        `name` is a `str`ing. Defaults to `"Block"`. 
-        `unbreakable` is an `bool`, showing off if the block is unbreakable, e.g. Bedrock. Defaults to `False`
-        `breaktime` is an `int`, which represents seconds it takes to break this block. Defaults to `10`
+        This function manages how the rendering engine should display the block, and the character in it.
+        It is to be overriden in special blocks, e.g. Air, stairs, etc
         """
-        
-        self.id = id
-        self.image = image
-        self.resistance = resistance
-        self.name = name
-        self.unbreakable = unbreakable
-        self.falls = falls
-        self.breaktime = breaktime
+        # TODO: Move the character thing to self.logic
+        if self.image:
+            solution.blit(self.image, rect)
 
 
 class NoIDBlock(Block):
-    
-    def __init__(
-        self,
-        image,
-        resistance=2,
-        name="No ID Block", 
-        unbreakable=False,
-        falls=False,
-        breaktime=10,
-    ):
-        """
-        This class requires the same parameters, except the ID. It is non-existent. See documentation on `libmineshaft.block.Block` for more information.
-        """
-        
-        self.image = image
-        self.resistance = resistance
-        self.name = name
-        self.unbreakable = unbreakable
-        self.falls = falls
-        self.breaktime = breaktime
+    """
+    This class is the class that should be used as the parent to every block in MultipleStateBlock.blocks.
+    """
+
+    image = False
+    resistance = -1
+    name = "No Id Block"
+    unbreakable = True
+    falls = False
+    breaktime = -1
 
 
 class MultipleStateBlock(Block):
     """
-    This class has only two required parameters:
-    `id`, an intreger representing the block ID.
-    `blocks`, a list of `libmineshaft.blocks.NoIDBlock` objects, max 15 entries.
+    This class is the class that should be used as the parent to every block that has multiple states, e.g. furnace lit/unlit, dirt/coarse dirt, etc.
     """
-    def __init__(self, id, blocks):
-        if len(blocks) > 15:
-            raise IndexError(
-                "There is too much block IDs.\nMore block ID slots may be added in the future"
-            )
-        self.id = id
-        self.blocks = blocks
-        self.default = self.blocks[0]
 
-__all__ = ["MultipleStateBlock",  "Block",  "NoIDBlock"]
+    id = None
+    name = "Multiple State Block"
+    blocks = None
+    currentstate = None
 
+    def blit(self, solution, rect):
+        if self.currentstate:
+            solution.blit(self.blocks[self.currentstate.image], rect)
+        else:
+            return None
+
+
+__all__ = ["MultipleStateBlock", "Block", "NoIDBlock"]

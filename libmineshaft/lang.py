@@ -3,6 +3,7 @@ import platform
 import libmineshaft
 from time import sleep
 
+#TODO: remove this module and use cmd in shell.py instead
 
 def respond(response):
     response = response.split(" ")

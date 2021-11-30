@@ -1,12 +1,13 @@
 import libmineshaft.lang as lang
 
+HISTORYFILE = ".libms_history"
 
 def run():
     while True:
         response = input("Mineshaft~$ ")
-        file = open(".libms_history", "a")
-        rfile = open(".libms_history", "r")
-        wfile = open(".libms_history", "w")
+        file = open(HISTORYFILE, "a")
+        rfile = open(HISTORYFILE, "r")
+        wfile = open(HISTORYFILE, "w")
         if len(rfile.readlines()) >= 1000:
             wfile.write("")
 

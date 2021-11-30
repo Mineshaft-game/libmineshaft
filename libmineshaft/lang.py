@@ -23,7 +23,7 @@ def respond(response):
                         "edit: Cannot edit config; Editing is onlly supported on Linux/Unix, Darwin (OS X/MacOS) and Windows."
                     )
 
-        except:
+        except IndexError:
             print("\nedit help:")
             print("edit - print this unhelpful message")
             print("edit config - edit .mineshaft/mineshaft.conf\n")

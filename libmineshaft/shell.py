@@ -2,6 +2,8 @@ import libmineshaft.lang as lang
 
 HISTORYFILE = ".libms_history"
 
+#TODO: use cmd module
+
 def run():
     while True:
         response = input("Mineshaft~$ ")

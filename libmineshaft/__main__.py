@@ -1,19 +1,5 @@
-import libmineshaft
-import libmineshaft.shell as shell
-import platform
-import sys
-
-
-def main():
-    print(
-        f"libmineshaft [{libmineshaft.__version__}] on [{platform.platform()}].\nHave a nice day coding.\n"
-    )
-    try:
-        shell.run()
-
-    except KeyboardInterrupt:
-        sys.exit(print("Goodbye, have a nice day"))
+from . import shell
 
 
 if __name__ == "__main__":
-    main()
+    shell.run()

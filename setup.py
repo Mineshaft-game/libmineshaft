@@ -67,9 +67,9 @@ setup(
     install_requires=["pygame>=2.0.1", "pygame-menu"],
     entry_points={
         "console_scripts": [
-            "libmineshaft-console = libmineshaft.__main__:main",
-            "libms-console = libmineshaft.__main__:main",
-            "ms-console = libmineshaft.__main__:main",
+            "libmineshaft-console = libmineshaft.shell:run",
+            "libms-console = libmineshaft.shell:run",
+            "ms-console = libmineshaft.shell:run",
         ]
     },
 )

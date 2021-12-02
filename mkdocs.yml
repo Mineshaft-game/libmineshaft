@@ -1,5 +1,5 @@
 site_name: libmineshaft Documentation
-theme: ivory
+theme: readthedocs
 nav:
     - libmineshaft: "index.md"
     - Getting Started:    

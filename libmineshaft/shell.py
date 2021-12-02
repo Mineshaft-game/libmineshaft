@@ -21,7 +21,7 @@ class Prompt(Cmd):
     
     do_EOF = do_exit
 
-#TODO: use cmd module
+
 
 
 def run():

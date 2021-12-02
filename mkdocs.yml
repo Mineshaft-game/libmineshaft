@@ -1,0 +1,5 @@
+site_name: libmineshaft Documentation
+nav:
+    - libmineshaft: "index.md"
+    - Getting Started:    
+        - Installation: "install.md"

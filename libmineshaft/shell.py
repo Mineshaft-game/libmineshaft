@@ -5,6 +5,7 @@ import platform
 
 HISTORYFILE = ".libms_history"
 
+
 class Prompt(Cmd):
     prompt = " Mineshaft~$ "
     intro = f"libmineshaft [{libmineshaft.__version__}] on [{platform.platform()}].\nHave a nice day coding.\n"
@@ -19,6 +20,9 @@ class Prompt(Cmd):
             return self.do_exit(inp)
     
     do_EOF = do_exit
+
+#TODO: use cmd module
+
 
 def run():
     while True:

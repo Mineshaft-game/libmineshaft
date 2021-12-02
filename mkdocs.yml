@@ -3,3 +3,5 @@ nav:
     - libmineshaft: "index.md"
     - Getting Started:    
         - Installation: "install.md"
+
+theme: ivory

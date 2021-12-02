@@ -12,8 +12,9 @@ class Prompt(Cmd):
     
     def do_exit(self, inp):
         """Exit the console. Shortcuts: quit, ex, q, x"""
+      
         print("Goodbye, have a nice day!")
-        sys.exit()
+        sys.exit(print(inp) )
         
     def default(self, inp):
         if inp in ["quit",  "ex",  "q",  "x"]:

@@ -1,7 +1,6 @@
 site_name: libmineshaft Documentation
+theme: ivory
 nav:
     - libmineshaft: "index.md"
     - Getting Started:    
         - Installation: "install.md"
-
-theme: ivory

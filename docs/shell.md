@@ -5,8 +5,9 @@ import libmineshaft.shell as shell
 
 shell.run() # Run a shell session
 ```
- Or you could create an object of `Prompt`. It's a `cmd.Cmd` object, so refer to `cmd`'s documentation for more options.
- ```
+
+Or you could create an object of `Prompt`. It's a `cmd.Cmd` object, so refer to `cmd`'s documentation for more options.
+```
 from libmineshaft.shell import Prompt
 
 p = Prompt()

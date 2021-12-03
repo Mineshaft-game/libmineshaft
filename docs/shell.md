@@ -19,7 +19,7 @@ p.cmdloop()
 
 
 At this point you can customize the prompt, e.g. add commands, change welcome message, and more.
-
+It is even possible to run multiple shells at once with the `Prompt` class.
 
 
 

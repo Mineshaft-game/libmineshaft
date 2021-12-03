@@ -18,4 +18,14 @@ pip3 install wheel
 python3 setup.py bdist_wheel
 ```
 
-Builds will be under the dist/ directory
+Builds will be under the dist/ directory. 
+To upload them to PyPI, install twine. 
+```
+pip3 install twine
+cd dist
+twine upload * #Only use this if the dist directory contains only a single build that is not to be overrides
+twine upload *x.x.x.* #Replace x with the version numbers
+```
+Please note, that you will have to have access to the `libmineshaft` project on PyPI to upload it. 
+
+

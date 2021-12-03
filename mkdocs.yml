@@ -1,9 +1,10 @@
-site_name: libmineshaft Documentation
+site_name: libmineshaft 
 theme: readthedocs
 nav:
-    - Welcome to libmineshaft's documentation: "index.md"
+    - Home: "index.md"
     - Getting Started:    
         - Installation: "install.md"
-    
+    - Basics:
+        - Blocks: "blocks.md"
     - Advanced:
         - Shell: "shell.md"

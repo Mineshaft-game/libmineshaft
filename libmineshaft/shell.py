@@ -14,8 +14,11 @@ class Prompt(Cmd):
         """Exit the console. Shortcuts: quit, ex, q, x"""
       
         print("Goodbye, have a nice day!")
-        sys.exit(print(inp) )
         
+        if __name__ == "__main__":
+            sys.exit(print(inp))
+        else: 
+            return True
     def default(self, inp):
         if inp in ["quit",  "ex",  "q",  "x"]:
             return self.do_exit(inp)
@@ -26,6 +29,6 @@ class Prompt(Cmd):
 
 
 def run():
-    while True:
-        cmd = Prompt()
-        cmd.cmdloop()
+    cmd = Prompt()
+        
+    cmd.cmdloop()

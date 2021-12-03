@@ -14,10 +14,19 @@ p = Prompt()
 p.cmdloop()
  
 ```
+
+
+
 At this point you can customize the prompt, e.g. add commands, change welcome message, and more.
+
+
+
 
 ## Shell commands 
 The shell contains a built-in `help` function:
+
+
+
 ```
 libmineshaft [0.1.5] on [Linux-5.11.0-38-generic-x86_64-with-glibc2.29].
 Have a nice day coding.

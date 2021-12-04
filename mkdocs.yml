@@ -5,6 +5,7 @@ nav:
     - Getting Started:    
         - Installation: "install.md"
     - Basics:
+        - Metadata: "init.md"
         - Blocks: "blocks.md"
     - Advanced:
         - Shell: "shell.md"

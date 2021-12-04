@@ -9,3 +9,5 @@ nav:
         - Blocks: "blocks.md"
     - Advanced:
         - Shell: "shell.md"
+    - Info:
+        - Upcoming features: "future.md"

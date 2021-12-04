@@ -22,5 +22,11 @@ After that, add the block into your block index dictionary, by any means and let
 This information may be important if you are making a rendering engine.
 
 
-The `libmineshaft.blocks.Block` class contains a function called `self.blit`. It requires two arguments:
-- `solution` - The solution for the graphics you are using: It MUST have a `blit` method, which takes the arguments: `image` which is the image path, and the `rect`angle where it is to be blitted: see below
+The `libmineshaft.blocks.Block` class contains a function called `Block.blit`. It requires two arguments:
+
+
+
+* `solution` - The solution for the graphics you are using: It MUST have a `blit` method, which takes the arguments: `image` which is the image path, and the `rect`angle where it is to be blitted: see below
+* `rect` - A tuple that contains the coordinates where the block should be blitted
+
+Please note that a wrapper may will be needed with most external libraries, since libmineshaft was made for Pygame, it is adapted to it. An alternative to this would be overriding the `Block.blit` function (maybe in a wrapper Block class) to have the required blit function.

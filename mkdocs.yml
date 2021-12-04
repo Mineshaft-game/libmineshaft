@@ -1,4 +1,9 @@
 site_name: libmineshaft 
+site_description: Helper library for Mineshaft and mod creation for it
+site_author: Double Fractal Game Studios
+repo_url: https://sourceforge.net/projects/libmineshaft.mineshaft2d.p/
+repo_name: Sourceforge
+copyright: Copyright 2021 Double Fractal Game Studios
 theme: readthedocs
 nav:
     - Home: "index.md"
@@ -11,3 +16,9 @@ nav:
         - Shell: "shell.md"
     - Info:
         - Upcoming features: "future.md"
+
+extra:
+    version: 0.1.6rc-1
+
+markdown_extensions:
+    toc: {}

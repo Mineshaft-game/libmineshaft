@@ -22,7 +22,7 @@ class LibmineshaftCui:
         shell.run()
         self.master.start()
 
-    def start_storyscript(self)
+    def start_storyscript(self):
         self.master.stop()
         curses.endwin()
         storyscript.__main__.main()

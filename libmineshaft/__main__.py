@@ -28,12 +28,15 @@ class LibmineshaftCui:
         self.master.start()
 
 
-root = py_cui.PyCUI(5, 2)
+def main():
+    root = py_cui.PyCUI(5, 2)
 
-root.toggle_unicode_borders()
-root.set_title(f'libmineshaft v[{libms_version}] Selection GUI')
-cui = LibmineshaftCui(root)
+    root.toggle_unicode_borders()
+    root.set_title(f'libmineshaft v[{libms_version}] Selection GUI')
+    cui = LibmineshaftCui(root)
+    root.start()
 
 
 if __name__ == "__main__":
-    root.start()
+    main()
+    

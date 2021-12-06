@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="libmineshaft",
-    version="0.1.6rc-2",
+    version="0.1.6rc-3",
     description="Helper library for Mineshaft and mod creation for it",
     long_description=long_description,
     author="Double Fractal Game Studios",
@@ -70,6 +70,8 @@ setup(
             "libmineshaft-console = libmineshaft.shell:run",
             "libms-console = libmineshaft.shell:run",
             "ms-console = libmineshaft.shell:run",
+            "libmineshaft = libmineshaft.__main__:main",
+            "libms-cui = libmineshaft.__main__:main",
         ]
     },
 )

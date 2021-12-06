@@ -14,11 +14,12 @@ nav:
         - Blocks: "blocks.md"
     - Advanced:
         - Shell: "shell.md"
+        - CUI: "cui.md"
     - Info:
         - Upcoming features: "future.md"
 
 extra:
-    version: 0.1.6rc-2
+    version: 0.1.6rc-3
 
 markdown_extensions:
     toc: {}

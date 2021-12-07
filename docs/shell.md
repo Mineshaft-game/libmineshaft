@@ -1,3 +1,6 @@
+## Shell requirements on Linux and MacOS
+The shell requires the `vim` text editor on Linux and MacOS. Please install it through any means. If it is not installed, libms-shell will show an error that it is not found.
+
 ## Embedding a custom shell
 A custom shell may be embedded using the `libmineshaft.shell` module. 
 ```python

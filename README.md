@@ -1,5 +1,6 @@
 [![Documentation Status](https://readthedocs.org/projects/libmineshaft/badge/?version=latest)](https://libmineshaft.readthedocs.io/en/latest/?badge=latest) [![Join the chat at https://gitter.im/Mineshaft-game/libmineshaft](https://badges.gitter.im/Mineshaft-game/libmineshaft.svg)](https://gitter.im/Mineshaft-game/libmineshaft?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/libmineshaft?color=yellow&label=PyPI%20downloads&logo=python&logoColor=white)
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Mineshaft-game_libmineshaft)](https://sonarcloud.io/summary/new_code?id=Mineshaft-game_libmineshaft)
 
 # libmineshaft
 [![libmineshaft](https://raw.githubusercontent.com/Mineshaft-game/libmineshaft/main/logo.png)](#)

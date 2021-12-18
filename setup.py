@@ -64,7 +64,7 @@ setup(
         "mod",
     ],
     packages=["libmineshaft"],
-    install_requires=["pygame>=2.0.1", "pygame-menu", "py-cui", "storyscript>=0.0.3",],
+    install_requires=["pygame>=2.0.1", "pygame-menu", "py-cui", "storyscript>=0.0.3"],
     entry_points={
         "console_scripts": [
             "libmineshaft-console = libmineshaft.shell:run",
@@ -72,6 +72,7 @@ setup(
             "ms-console = libmineshaft.shell:run",
             "libmineshaft = libmineshaft.__main__:main",
             "libms-cui = libmineshaft.__main__:main",
+            "libms = libmineshaft.__main__:main",
         ]
     },
 )

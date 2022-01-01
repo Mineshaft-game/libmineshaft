@@ -13,18 +13,11 @@ class Prompt(Cmd):
 
     def do_edit(self, inp):
         """
-        Supported options: config. edit config. Edits Mineshaft's configuration. Please note that on MacOS and Linux it requires vim to be installed
+        Supported options: config. edit config. Edits Mineshaft's configuration. Deprecated as nowdays Mineshaft uses Pickle configuration instead of .conf or .ini files
         """
 
         if inp == "config":
-            if platform.platform().split("-")[0] in ["Linux", "Unix", "Darwin"]:
-                os.system("vim ./.mineshaft/mineshaft.conf")
-            elif platform.platform().split("-")[0] in ["Windows", "DOS"]:
-                os.system("start .mineshaft\\mineshaft.conf")
-
-            else:
-                print("Your system is not supported. Sorry")
-
+          print("Editing config is deprecated as config now is in pickle format")
         else:
             print(
                 "Please enter a valid edit command. See help edit for more documentation"

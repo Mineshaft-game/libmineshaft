@@ -32,7 +32,7 @@ The shell contains a built-in `help` function:
 
 
 ```
-libmineshaft [0.1.5] on [Linux-5.11.0-38-generic-x86_64-with-glibc2.29].
+libmineshaft [x.x.x] on [OS-build-platform-arch].
 Have a nice day coding.
 
  Mineshaft~$ help
@@ -40,6 +40,7 @@ Have a nice day coding.
 Documented commands (type help <topic>):
 ========================================
 EOF  exit  help
+--snip--
 
  Mineshaft~$ 
 ```

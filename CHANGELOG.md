@@ -1,3 +1,6 @@
+## v0.1.6
+* Urgent update to support spritesheets
+
 ## v0.1.6rc-3
 * Add more buttons to CUI
 * Add storyscript to dependencies

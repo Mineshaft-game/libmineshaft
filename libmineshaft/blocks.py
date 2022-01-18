@@ -33,7 +33,7 @@ class Block:
     """
 
     id = None
-    image = None
+    imagecoords = (0, 0)
     resistance = -1
     name = "Block"
     unbreakable = True
@@ -55,7 +55,7 @@ class NoIDBlock(Block):
     This class is the class that should be used as the parent to every block in MultipleStateBlock.blocks.
     """
 
-    image = False
+    imagecoords = (0, 0)
     resistance = -1
     name = "No Id Block"
     unbreakable = True

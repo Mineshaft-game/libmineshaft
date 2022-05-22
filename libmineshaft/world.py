@@ -25,7 +25,7 @@ import os
 class World:
     def __init__(self, saves_dir=os.path.join(".mineshaft","saves"),   name="World", gamemode=0):
         """The currently-useless world class"""
-        self.db_connection = sqlite3.connect(os.path.join(saves_dir,  name))
+        self.db_connection = sqlite3.connect(os.path.join(saves_dir,  name,  "world.db"))
         self.database = self.db_connection.cursor()
         self.gamemode = gamemode
         self.name = name

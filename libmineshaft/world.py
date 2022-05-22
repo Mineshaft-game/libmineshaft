@@ -19,11 +19,15 @@ Copyright (C) 2021-2022 Alexey "LEHAtupointow" Pavlov
 
 
 """
-
+import sqlite3
+import os
 
 class World:
-    def __init__(self, world=None, name="World", gamemode=0):
+    def __init__(self, saves_dir=os.path.join(".mineshaft","saves"),   name="World", gamemode=0):
         """The currently-useless world class"""
+        self.db_connection = sqlite3.connect(os.path.join(saves_dir,  name))
+        self.database = self.db_connection.cursor()
         self.gamemode = gamemode
-        self.world = world
         self.name = name
+    def save(self):
+        self.db_connection.commit()

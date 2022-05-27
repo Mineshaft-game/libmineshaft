@@ -19,15 +19,20 @@ Copyright (C) 2021-2022 Alexey "LEHAtupointow" Pavlov
 
 
 """
-import sqlite3
+from pynbt import *
 import os
+import gzip
 
 class World:
     def __init__(self, saves_dir=os.path.join(".mineshaft","saves"),   name="World", gamemode=0):
         """The currently-useless world class"""
-        self.db_connection = sqlite3.connect(os.path.join(saves_dir,  name,  "world.db"))
-        self.database = self.db_connection.cursor()
+        with gzip.open(os.path.join(saves_dir,  name,  "chunks.dat"),  "rb") as gzipped:
+            self.world = NBTFile(gzipped)
         self.gamemode = gamemode
         self.name = name
+        self.saves_dir = saves_dir
     def save(self):
-        self.db_connection.commit()
+        with open(os.path.join(self.saves_dir,  self.name,  "chunks.dat.tempsave.ungzipped"),  "wb") as io:
+            self.world.save(io)
+        with open(os.path.join(self.saves_dir,  self.name,  "chunks.dat.tempsave.ungzipped"),  "rb") as ungzipped,  gzip.open(os.path.join(self.saves_dir,  self.name,  "chunks.dat"),  "wb") as gzip_out:
+            gzip_out.writelines(ungzipped)

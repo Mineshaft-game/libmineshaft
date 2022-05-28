@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="libmineshaft",
-    version="0.1.7-rc1",
+    version="0.1.7-rc2",
     description="Helper library for Mineshaft and mod creation for it",
     long_description=long_description,
     author="Double Fractal Game Studios",
